@@ -4,3 +4,9 @@ Aquí se encontrará la API * Tecnología * y la Base de datos * Data Base *, es
 	* Marco Guerreo
 	* Erick Roberto
 	* Kevin Loyola [Encargado del Área]
+
+Las tecnologías que se usarán son las siguientes:
+	
+	* Servidor: NodeJS
+	* DataBase: MongoDB
+	* Hosting: Firebase [SOLO HOSTING]
