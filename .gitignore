@@ -1,1 +1,9 @@
 GDG.json
+.DS_Store
+.idea/
+GDG_Aragon_site.iml
+api/.DS_Store
+api/GDG-UNAM-Project.iml
+api/README.md
+api/__pycache__/
+
