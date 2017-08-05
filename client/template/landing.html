@@ -7,15 +7,19 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="../assets/media/images/gdg/gdg-icon.svg"/>
+    <link rel="icon" href="../assets/media/images/gdg/gdg-icon.ico"/>
     <link rel="stylesheet" href="../assets/css/startup-materialize.min.css">
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../assets/css/icon.css" rel="stylesheet">
+    <link href="../assets/css/hack.css" rel="stylesheet">
 
     <!-- Style -->
     <style>
+      .read-more{
+        line-height: 47px !important;
+      }
       #gdg-logo{
         width:30%;
         margin-left:10vh;
@@ -25,12 +29,36 @@
         margin-top: 50px;
         margin-left: 27%;
       }
+      #gdg-footer{
+        width: 30%;
+        margin-left: 2.5em;
+      }
       #read-more{
         margin-top: 930px;
       }
-      /*Media Query*/
-      @media (min-width:320px) and (max-width:770px) {
-        #gdg-logo{margin-left:30%;}
+      #gdg_unam_hori{
+        margin-top: 40px;
+        margin-left: 120px;
+      }
+      #btn-event{margin-top: 27px;}
+      #btn-hack{margin-left: 5.5em;}
+      .card.card-action{
+        border-top: 5px solid rgba(160,160,160,0.2) !important;
+      }
+      .titleNav{
+        font-size: 1.64rem;
+        line-height: 110%;
+        margin: .82rem 0 .656rem 0;
+        text-transform: none;
+      }
+      @media (min-width:650px) and (max-width:1000px) {
+        #gdg-unam{margin-top: 190px;}
+        #read-more {margin-top: 650px;}
+        #gdg_unam_hori{margin-left: 3em !important;}
+        #read-more {margin-top: 44em !important;}
+      }
+      @media (min-width: 300px) and (max-width: 500px){
+        #gdg-logo{margin-left:1em;}
       }
     </style>
   </head>
@@ -41,20 +69,27 @@
       <div class="nav-wrapper black-text">
         <a href="landing.html" class="brand-logo"><img src="../assets/media/images/gdg/gdg-icon.png" alt="" class="responsive-img" id="gdg-logo"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down black-">
-          <li><a href="landing.html">GDG UNAM</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="team.html">Equipo</a></li>
+          <li><a href="event.html"><h5 class="titleNav">Eventos</h5></a></li>
+          <li><a href="#contact"><h5 class="titleNav">Hackathon</h5></a></li>
+          <li><a href="#hackathon"><h5 class="titleNav">Equipo</h5></a></li>
+          <li><a href="blog.html"><h5 class="titleNav">Blog</h5></a></li>
         </ul>
 
-        <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons white-text">menu</i></a>
+        <a href="#" data-activates="slide-out" class="button-collapse right"><i class="material-icons md-dark">menu</i></a>
       </div>
     </nav>
 
     <ul id="slide-out" class="side-nav black-text">
-      <li><a class="waves-effect waves-teal" href="landing.html">GDG UNAM</a></li>
-      <li><a class="waves-effect waves-teal" href="blog.html">Blog</a></li>
-      <li><a class="waves-effect waves-teal" href="team.html">Equipo</a></li>
+      <li><a class="waves-effect waves-teal" href="event.html"><h5 class="titleNav">Eventos</h5></a></li>
+      <li class="hide-on-med-only"><a class="waves-effect waves-teal" href="#hackathon"><h5 class="titleNav">Hackathon</h5></a></li>      
+      <li class="hide-on-med-only"><a class="waves-effect waves-teal" href="#team"><h5 class="titleNav">Equipo</h5></a></li>
+      <li><a class="waves-effect waves-teal" href="blog.html"><h5 class="titleNav">Blog</h5></a></li>
+
+      <li class="hide-on-small-only"><a class="waves-effect waves-teal" href="#contact"><h5 class="titleNav">Hackathon</h5></a></li>
+      <li class="hide-on-small-only"><a class="waves-effect waves-teal" href="#hackathon"><h5 class="titleNav">Equipo</h5></a></li>
     </ul>
+
+
 
     <div class="header shuffle-over-transition white black-text">
       <div class="background row">
@@ -65,7 +100,7 @@
           <h1 class="center-align blue-text text-darken-2">GDG</h1>
         </div>
         <div class="col s12">
-          <a href="#!" class="btn-floating dark" id="read-more"><i class="material-icons">details</i></a>
+          <a href="#!" class="btn-floating dark" id="read-more"><i class="material-icons read-more">details</i></a>
         </div>
         <div class="col s12 ">
           <h1 class="center-align grey-text text-darken-2">UNAM</h1>
@@ -76,96 +111,238 @@
         <div class="col s12">
           <h1 class="center-align blue-text text-darken-2">GDG</h1>
           <h1 class="center-align grey-text text-darken-2">UNAM</h1>
-          <span class="tagline">Una comunidad de estudiantes para estudiantes.</span>
-          <a href="#!" class="btn-floating dark"><i class="material-icons">details</i></a>
+          <a href="#!" class="btn-floating dark" style="margin-top: 10px"><i class="material-icons read-more">details</i></a>
         </div>
       </div>
     </div>
-    <!-- Features -->
-    <div class="section black valign-wrapper shuffle-over-transition">
+
+    <!--History-->
+    <div class="section white valign-wrapper shuffle-over-transition">
       <div class="container">
         <div class="row">
-          <div class="col s12"><h2 class="section-title">Features</h2></div>
-          <div class="col s12 m6 l4">
-            <h4><i class="icon-light-bulb"></i></h4>
-            <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+          <div class="col s12 center-align">
+            <h2>¿Qué es GDG UNAM?</h2>
           </div>
-          <div class="col s12 m6 l4">
-            <h4><i class="icon-bolt"></i></h4>
-            <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
-          </div>
-          <div class="col s12 m6 l4">
-            <h4><i class="icon-rocket"></i></h4>
-            <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
-          </div>
-          <div class="col s12 m6 l4">
-            <h4><i class="icon-settings"></i></h4>
-            <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
-          </div>
-          <div class="col s12 m6 l4">
-            <h4><i class="icon-umbrella"></i></h4>
-            <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
-          </div>
-          <div class="col s12 m6 l4">
-            <h4><i class="icon-compass"></i></h4>
-            <p class="caption">This is a cool feature about your product! It really separates you from the crowd.</p>
+          <div class="col s12 m12 l8 offset-l2">
+            <p style="color: black;" class="caption">Es un grupo de desarrollo que busca crear y generar contenido relacionado a la tecnología e innovación. Por medio de talleres y meetups, se busca acercar a la comunidad universitaria (entiéndase como trabajadores y estudiantes. de todos los niveles como bachillerato, licenciatura. posgrados, etc.) y a gente externa de ella, a comunidades de desarrollo, las cuales puedan ser de apoyo para su desarrollo profesional. Así a su vez se invita a empresas (chicas, medianas o grandes) a acercarse a la comunidad de GDG UNAM en busca de talento para proyectos de innovación y desarrollo.</p>
+            <div class="responsive-img hide-on-small-only">
+              <img src="../assets/media/images/gdg/gdg-unam-horizontal.png" alt="GDG UNAM" id="gdg_unam_hori">
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Blog -->
-    <div class="section light full-height">
+    <!-- Areas -->
+    <div class="section black light full-height white-text">
       <div class="container">
-        <div class="row">
+        <div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".1">
           <div class="col s12 center">
-            <h1>blog</h1>
+            <h1>Areas</h1>
             <div class="row masonry-grid">
-              <div class="col s12 m6 l4">
-                <div class="card">
-                  <div class="card-image">
-                    <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                    <span class="card-title">Something Interesting</span>
+              <div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".9"">
+                <div class="col s12 m6 l5 offset-l1 fade-in-out">
+                  <div class="card grey lighten-2 black-text">
+                    <div class="card-content">
+                      <h4 class="black-text"><i class="material-icons md-green md-right">work</i>Organización</h4>
+                    </div>
+                    <div class="card-action">
+                      <p class="caption">This is a cool feature about your product! It really separates you from the crowd. This is a cool feature about your product!</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col s12 m6 l4">
-                <div class="card">
-                  <div class="card-image">
-                    <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                    <span class="card-title">Another Blog Post</span>
+              <div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".9"">
+                <div class="col s12 m6 l5 fade-in-out">
+                  <div class="card grey lighten-2 black-text">
+                    <div class="card-content white-text">
+                      <h4 class="black-text"><i class="material-icons md-amber md-right">code</i>Aprendizaje</h4>
+                    </div>
+                    <div class="card-action">
+                      <p class="caption">This is a cool feature about your product! It really separates you from the crowd. This is a cool feature about your product!</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col s12 m6 l4">
-                <div class="card">
-                  <div class="card-image">
-                    <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                    <span class="card-title">Click Bait Article</span>
+              <!-- Segundo renglon -->
+              <div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".9"">
+                <div class="col s12 m6 l5 offset-l1 fade-in-out">
+                  <div class="card grey lighten-2 black-text">
+                    <div class="card-content white-text">
+                      <h4 class="black-text"><i class="material-icons md-blue md-right">grade</i>Enseñanza</h4>
+                    </div>
+                    <div class="card-action">
+                      <p class="caption">En enseñanza nos centramos principalmente en transmitir nuestros conocimientos sobre diferentes tecnologías con el objetivo de adentrar a la comunidad al inmenso mundo de la programación </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col s12 m6 l4">
-                <div class="card">
-                  <div class="card-image">
-                    <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                    <span class="card-title">Don't Read This!</span>
+              <div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".9"">
+                <div class="col s12 m6 l5 fade-in-out">
+                  <div class="card grey lighten-2 black-text">
+                    <div class="card-content white-text">
+                      <h4 class="black-text"><i class="material-icons md-red md-right">devices</i>Multimedia</h4>
+                    </div>
+                    <div class="card-action">
+                      <p class="caption">This is a cool feature about your product! It really separates you from the crowd. This is a cool feature about your product!</p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col s12 m6 l4">
-                <div class="card">
-                  <div class="card-image">
-                    <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                    <span class="card-title">Why Are You Still Reading?</span>
-                  </div>
-                </div>
+              <div class="col s12">
+                <a class="waves-effect waves-light btn modal-trigger" href="event.html" id="btn-event">Próximos Eventos!</a>
               </div>
-              <div class="col s12 m6 l4">
-                <div class="card">
-                  <div class="card-image">
-                    <a href="blog.html"><img src="http://placehold.it/600x400"></a>
-                    <span class="card-title">Good Bye</span>
+            </div>        
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Members -->
+    <div class="section white shuffle-under-transition" id="team">
+      <div class="container">
+        <div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".9">
+          <div class="col s12 center-align hide-on-med-only">
+            <h1 class="section-title">Miembros</h1>
+          </div>
+          <div class="team">
+            <div class="row">
+              <div class="col s12">
+                <div class="row">
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Kevin Gutierrez</span>
+                      <span class="title">Founder & Organization Manager</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">David Moranchel</span>
+                      <span class="title">Co-Founder & Software Manager</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Saúl Garcia</span>
+                      <span class="title">Co-Founder & Quality in Organization</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Jorge Alejandro</span>
+                      <span class="title">Co-Founder & Multimedia Manager</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Erick Roberto</span>
+                      <span class="title">Workshops Manager</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Aarón Cervantes</span>
+                      <span class="title">Quality in Workshops</span>
+                    </div>
+                  </div>
+                  <div class="col s12 hide-on-small-only">
+                    <div class="divider"></div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Alan Vargas</span>
+                      <span class="title">Quality in Software</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Mildred Ordoñez</span>
+                      <span class="title">Hardware Manager</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Javier Vazquez</span>
+                      <span class="title">Quality in Organization</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Marco Guerrero</span>
+                      <span class="title">Quality in Software</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Carlos Ovando</span>
+                      <span class="title">Software Member</span>
+                    </div>
+                  </div>
+                  <div class="col s12 m2">
+                    <div class="avatar-wrapper">
+                      <span class="avatar">
+                        <img src="http://placehold.it/256x256" alt="">
+                      </span>
+                    </div>
+                    <div class="avatar-name">
+                      <span class="name">Mauricio Espinosa</span>
+                      <span class="title">Workshop Member</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -175,101 +352,48 @@
       </div>
     </div>
 
-    <!-- Pricing Tables -->
-    <div class="section black valign-wrapper shuffle-under-transition">
+    <!-- Hackathon -->
+    <div class="section valign-wrapper shuffle-under-transition space" id="hackathon">
       <div class="container">
         <div class="row">
-          <div class="col s12 m4">
-            <div class="pricing-table">
-              <div class="pricing-header">
-                <i class="icon-paper-plane"></i>
-                <h4>Basic</h4>
-                <div class="price">
-                  <span class="currency">$</span>
-                  <span class="dollars">9</span>
-                  <span class="cents">99</span>
-                </div>
-              </div>
-              <ul class="pricing-features">
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature disabled"><i class="icon-close"></i>Pro and above.</li>
-                <li class="pricing-feature disabled"><i class="icon-close"></i>Enterprise only.</li>
-                <li class="pricing-feature disabled"><i class="icon-close"></i>Enterprise only.</li>
-                <li class="pricing-feature disabled"><i class="icon-close"></i>Enterprise only.</li>
-              </ul>
-            </div>
+          <div class="col s12 hide-on-small-only">
+            <img src="../assets/media/images/hack/earth.png" alt="Earth" id="earth">
+            <img src="../assets/media/images/hack/spaceship.png" alt="Spaceship" id="spaceship">
+            <img src="../assets/media/images/hack/android.png" alt="Android" id="android">
+            <img src="../assets/media/images/hack/moon.png" alt="Moon" id="moon">
           </div>
+          <div class="col s12 hide-on-med-and-up">
+            <img src="../assets/media/images/hack/android.png" alt="Android" id="android">
+            <img src="../assets/media/images/hack/spaceship.png" alt="Spaceship" id="spaceship">
 
-          <div class="col s12 m4">
-            <div class="pricing-table featured">
-              <div class="pricing-header">
-                <i class="icon-plane"></i>
-                <h4>Pro</h4>
-                <div class="price">
-                  <span class="currency">$</span>
-                  <span class="dollars">59</span>
-                  <span class="cents">99</span>
-                </div>
-              </div>
-              <ul class="pricing-features">
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>Pro and above.</li>
-                <li class="pricing-feature disabled"><i class="icon-close"></i>Enterprise only.</li>
-                <li class="pricing-feature disabled"><i class="icon-close"></i>Enterprise only.</li>
-                <li class="pricing-feature disabled"><i class="icon-close"></i>Enterprise only.</li>
-              </ul>
-            </div>
           </div>
-
-          <div class="col s12 m4">
-            <div class="pricing-table">
-              <div class="pricing-header">
-                <i class="icon-rocket"></i>
-                <h4>Enterprise</h4>
-                <div class="price">
-                  <span class="currency">$</span>
-                  <span class="dollars">299</span>
-                  <span class="cents">99</span>
-                </div>
-              </div>
-              <ul class="pricing-features">
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>10 product uses.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>Enterprise only.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>Enterprise only.</li>
-                <li class="pricing-feature"><i class="icon-accept"></i>Enterprise only.</li>
-              </ul>
-            </div>
+          <div class="col s12" id="creative">
+            <h1>Creative Hack</h1>
+            <h3 class="">Coming Soon...</h1>
+            <a class="waves-effect waves-light btn modal-trigger hide" href="#!" id="btn-hack"><i class="material-icons right">send</i>Inscribete</a>
           </div>
-
         </div>
       </div>
     </div>
 
     <!-- Contact Us -->
-    <div class="section light shuffle-under-transition valign-wrapper">
+    <div class="section dark shuffle-under-transition valign-wrapper" id="contact">
       <div class="container">
         <form>
           <div class="row">
-            <div class="col s12"><h2 class="section-title">Contact Us</h2></div>
+            <div class="col s12"><h2 class="section-title">Contactanos</h2></div>
             <div class="input-field col s6">
               <input id="first_name" type="text">
-              <label for="first_name">First Name</label>
+              <label for="first_name">Nombre(s)</label>
             </div>
             <div class="input-field col s6">
               <input id="last_name" type="text">
-              <label for="last_name">Last Name</label>
+              <label for="last_name">Apellido</label>
             </div>
             <div class="input-field col s12">
               <textarea id="message" class="materialize-textarea"></textarea>
-              <label for="message">Message</label>
-              <a class="waves-effect waves-light btn-large">Button</a>
+              <label for="message">Mensaje</label>
+              <a class="waves-effect waves-light btn-large"><i class="material-icons right md-light">send</i>Enviar</a>
             </div>
           </div>
         </form>
@@ -281,8 +405,8 @@
       <div class="container">
         <div class="row">
           <div class="col s6 m3">
-            <img class="materialize-logo" src="images/materialize-teal.png" alt="">
-            <p>Made with love by Materialize.</p>
+            <img class="materialize-logo" src="../assets/media/images/gdg/gdg-icon.png" alt="GDG-Icon" id="gdg-footer">
+            <p>Made with love by GDG UNAM.</p>
           </div>
           <div class="col s6 m3">
             <h5>About</h5>
@@ -311,7 +435,7 @@
         </div>
       </div>
     </footer>
-
+    
     <!-- Scripts -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/materialize.min.js"></script>

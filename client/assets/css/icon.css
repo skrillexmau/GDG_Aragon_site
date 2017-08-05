@@ -39,9 +39,25 @@
 
 /*Color Icon*/
 
+/*Blue*/
+.material-icons.md-blue { color: #1565c0; }
+.material-icons.md-blue.md-inactive { color: #90caf9; }
+/*Green*/
+.material-icons.md-green { color: #388e3c; }
+.material-icons.md-green.md-inactive { color: #c8e6c9; }
+/*Red*/
+.material-icons.md-red { color: #d32f2f; }
+.material-icons.md-red.md-inactive { color: #ffcdd2; }
+/*Amber*/
+.material-icons.md-amber { color: #ffc400; }
+.material-icons.md-amber.md-inactive { color: #ffecb3; }
+
 /*Dark*/
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 /*Light*/
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/*Margin right*/
+.material-icons.md-right{margin-right: 15px;}

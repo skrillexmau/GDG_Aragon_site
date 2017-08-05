@@ -1,0 +1,48 @@
+.space{
+    background-image: url('../media/images/hack/stars.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#earth{
+	position: relative;
+	width: 18%;
+	top: -19em;
+	right: 11em;
+}
+#spaceship{
+	position: relative;
+    width: 18%;
+    left: 17em;
+    top: 1em;
+    transform: rotate(75deg);
+	
+}
+#moon{
+	position: relative;
+    width: 32%;
+    left: 14em;
+    top: 24em;
+}
+#android{
+	position: relative;
+	left: 32em;
+	top: -12em;
+	width: 25%;
+}
+
+/*Media Query*/
+@media (min-width:650px) and (max-width:1000px) {
+    #android{left: 16em;top: -12em;}
+    #earth{top: -17em;right: 2em;}
+    #moon{left: 4em; top: 19em}
+    #spaceship{left: 8em;transform: rotate(85deg);top: -1em;}
+    #creative{margin-bottom: -11em;}
+}
+@media (min-width: 300px) and (max-width: 500px){
+	#android{width: 29%;left: 12em;top: 6em;}
+	#spaceship{width: 29%;left: -7em;top: -7em;margin: 9em;}
+	#creative{margin-top: -7em;}
+    #btn-hack{margin-left: 7em !important;}
+
+}
